@@ -78,17 +78,17 @@ A main idea is a state machine. Beginning with the initial state, a agent probes
 
 ```mermaid
 stateDiagram-v2
-    [*] --> BEGIN
-    BEGIN --> INVALID
-    INVALID --> DONE
-    BEGIN --> EXTRACT
-    EXTRACT --> BAND
-    EXTRACT --> ALBUM
-    BAND --> DESCISION
-    ALBUM --> DESCISION
-    DESCISION --> DONE
-    DESCISION --> EXTRACT
-    DONE --> [*]
+    [*] --> BEGIN: starting a process
+    BEGIN --> INVALID: finding a query is invalid
+    INVALID --> DONE: returning a message saying a query is invalid
+    BEGIN --> EXTRACT: finding a query is valid
+    EXTRACT --> BAND: passing keywords involving bands
+    EXTRACT --> ALBUM: passing keywords involving albums
+    BAND --> DECISION: answering using information retrieved from metallum
+    ALBUM --> DECISION: answering using information retrieved from metallum
+    DECISION --> DONE: finding an answer is sufficient
+    DECISION --> EXTRACT: finding more keywords to make a better answer
+    DONE --> [*]: finishing the process
 ```
 
 ## What is remaining?
