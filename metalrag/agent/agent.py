@@ -80,7 +80,6 @@ class Agent(BaseModel):
         while self.state != AgentState.DONE:
             agent_message, state = self.move(agent_message)
             self.state = state
-            print(self.state, agent_message)
         self.count = 0
         response = agent_message.metadata[0].get("response", "")
         self.add_to_assistant_messages(response)

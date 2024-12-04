@@ -2,7 +2,6 @@ import os
 from metalrag.llm.groq import GroqLLM
 from metalrag.agent.agent import Agent
 from dotenv import load_dotenv
-import metallum
 
 load_dotenv()
 
@@ -12,5 +11,6 @@ groq_llm = GroqLLM(
 )
 
 agent = Agent(llm=groq_llm)
+
 print(agent.chat("please tell me about the album Dystopia"))
 print(agent.chat("please tell me about the megadeth's album called Dystopia"))
