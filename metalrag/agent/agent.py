@@ -154,7 +154,6 @@ class Agent(BaseModel):
         
         {yaml.dump(band_data)}
         """
-        print(prompt)
         self.add_to_process_messages(prompt)
         messages = self.get_integrated_messages()
         response, _ = self.llm.chat(

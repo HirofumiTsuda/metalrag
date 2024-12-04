@@ -56,6 +56,18 @@ After searching the database, I found the following information:
 According to the information fetched from Metallum, Megadeth's album "Dystopia" was released in 2016 and is classified as a Thrash Metal album.
 ```
 
+If you would like to know another band, please ask to the agent.
+
+```python
+print(agent.chat("please tell me about the band called EXIMPERITUSERQETHHZEBIBSIPTUGAKKATHSULWELIARZAXULUM."))
+```
+
+```
+After searching for the band 'EXIMPERITUSERQETHHZEBIBSIPTUGAKKATHSULWELIARZAXULUM' on Metallum (the Heavy Metal Archives), I found that it's a Belarusian Funeral Doom band.
+
+ EXIMPERITUSERQETHHZEBIBSIPTUGAKKATHSULWELIARZAXULUM was formed in 2009 and their music style is associated with the funeral doom and drone genres. Not much information is provided, I suggest visit metallum web for more information
+```
+
 ### NOTE
 
 Sometimes error occur in executing Groq API (e.g. function calling fails). Then please re-execute codes and that would leads to the success: you get an answer from LLM!
